@@ -20,12 +20,12 @@ for (let i = 0; i < arr.length; i++) {
   const salary = arr[i];
   if (salary <= 10000){
     tax = 0;
-  } else if (salary > 10000 && salary < 20000){
+  } else if (salary > 10000 && salary <= 20000){
     tax = (salary - 10000) * 0.1;
-  } else if (salary >= 20000 && salary < 50000){
+  } else if (salary > 20000 && salary <= 70000){
     tax = (salary - 20000) * 0.2 + (10000 * 0.1);
-  } else if (salary > 50000){
-    tax = (salary - 50000) * 0.5 + (30000 * 0.2)+ (10000 * 0.1);
+  } else if (salary > 70000){
+    tax = (salary - 70000) * 0.5 + (50000 * 0.2) + (10000 * 0.1);
   }
   taxArray.push(tax);
   salarySumm+=taxArray[i];
